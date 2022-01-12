@@ -1,0 +1,1 @@
+let nCount=t=>{$(t).each(function(){$(this).animate({Counter:$(this).text()},{duration:4e3,easing:"swing",step:function(t){$(this).text(Math.ceil(t))}})})},a=0;$(window).scroll(function(){let t=$(".numbers").offset().top-window.innerHeight;0==a&&$(window).scrollTop()>=t&&(a++,nCount(".rect > h3"))});
