@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo|Belleza|Cabin|Cabin+Condensed|Karla|Mukta|Nunito|Open+Sans+Condensed:300|Pragati+Narrow|Roboto&display=swap');
+/* Imports the fonts for text from an outside source */
+/*font-family: 'Arimo', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Cabin Condensed', sans-serif;
+font-family: 'Pragati Narrow', sans-serif;
+font-family: 'Belleza', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Cabin', sans-serif;
+font-family: 'Karla', sans-serif;*/
+/* we kept these for remembering, these are a ll te fonts */
+body {
+  background-color: black;
+  color: white;
+  font-size: 22px;
+  font-family: 'Cabin', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-X: hidden;
+}
+/* Main Styling for the body, black backround white text */
+
+.container {
+  width: 82%;
+  margin: auto;
+  line-height:1.8zem;
+  background:#232e3a;
+  border: solid 10px #0b1725;
+  margin-top: 100px;
+  border-radius: 20px;
+}
+/* Container for basically all the websites themed with the intention of keeping everything in the middle and in a frame */
+
+.header {
+  font-family: 'Cabin', Helvetica, sans-serif, Arial;
+  padding: 20px;
+  text-align: center;
+  background-image: linear-gradient(to right, #f6851f, #f9b578);
+  font-size: 15px;
+  overflow:hidden;
+}
+/* Styling of the header for just the style of the backround */
+.headerforgames {
+  font-family: Consolas, Helvetica, sans-serif, Arial;
+  padding: 20px;
+  text-align: center;
+  background-image: linear-gradient(to right, #fc8d04, #4cadd0);
+  color: white;
+  font-size: 15px;
+  overflow:hidden;
+}
+/* This is the header for the games */
+.headpart1 {
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+}
+/* This part is for the logo and the text which is floated left */
+.headpart2 {
+  width: 500px;
+  margin-right: 1px;
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+}
+/*This is for the group game photo which is floated right  */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #f6851f, #f9b578);
+  box-shadow: 5px 8px 10px 2px rgba(0, 0, 0, 0.2);
+  z-index: 25;
+}
+/* This is making the navbar sticky and its also customized so its above everything and it has the same theme as the header. */
+#navbar1{
+    background-image: linear-gradient(to right, #fc8d04, #4cadd0);
+}
+/* Nav bar customization for the game */
+.navbar a {
+  float: left;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Navbar button customizations */
+
+.navbar a.active {
+  background-color: #c46a18;
+}
+/* Om man har tryckt på en navbar knapp så sk det byta färg */
+.navbar a.active:hover {
+  background-color: #ac5d15;
+}
+/* när man hoverar över en active så byter färg */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+/* dropdown funktionen när det är stängt */
+.dropdown .dropbtn {
+  font-size: 17px;
+  text-align: left;
+  width: 110px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+/*  Customizing all buttons*/
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #c46a18;
+  color: white;
+  cursor: pointer;
+}
+/* Hover control on all the buttons  */
+
+.dropdown-content {
+  display: none;
+  position: sticky;
+  background-color: #dd771b;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  width: 161px;
+}
+/* Dropdown Content customization when its closed  */
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/*  Dropdown button Customization*/
+.dropdown-content a:hover {
+  background-color: #c46a18;
+  color: white;
+}
+/*Dropdown button Customization när det hoverar  */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Dropdown Content blir inte hidden */
+.content {
+  padding: 16px;
+}
+/* padding på content */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* Sticky javascript länken mellan varandra */
+
+#i1, #i2, #i3, #i4, #i5, #i6, #i7, #i8 {
+  display: none;
+}
+/* att man inte ser de från början */
+.slider {
+  margin: 0 auto;
+  margin-top: 60px;
+  position: relative;
+  width: 70%;
+  height: 0;
+  padding-bottom: 38%;
+  user-select: none;
+  background-color: #1c1c1c;
+  border: solid 10px #616161;
+  border-radius: 10px;
+}
+/* slider och hur den ser ut */
+.slider .slide_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+/* att Img ska alltid vara insidan på slider */
+.slider .slide_img img {
+  width: inherit;
+  height: inherit;
+}
+/* Att det ska behålla width och height mellan slidern och bilden, (gör att bilderna ser ut lite konstigt men inga buggar) */
+.prev, .next {
+  width: 12%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  background-color: rgba(88, 88, 88, .2);
+  color: rgba(244, 244, 244, .9);
+  z-index: 99;
+  transition: .45s;
+  cursor: pointer;
+  text-align: center;
+}
+/* Knappar för fram och tillbaka och hur de ska se ut  */
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+/*  Den gör att knapparna för bakåt och framåt är på rätt plats */
+label span {
+  position: absolute;
+  font-size: 100pt;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev:hover, .next:hover {
+  transition: .3s;
+  background-color: rgba(88, 88, 89, .8);
+  color: #ffffff;
+}
+/* The Transition itself */
+
+.slider #nav_slide {
+  width: 100%;
+  bottom: 12%;
+  height: 11px;
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  cursor: default;
+}
+/* the slide customization */
+
+#nav_slide .dots {
+  top: -5px;
+  width: 18px;
+  height: 18px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: .4s;
+}
+/*  The customization for the dots inside the slider*/
+#nav_slide .dots:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: .25s
+}
+/* It changes stuff when you hover over the circles */
+.slide_img {
+  z-index: -1;
+}
+/* the z index of the pictures needs to be -1 to keep rasing the other pictures above */
+#i1:checked~#one,
+#i2:checked~#two,
+#i3:checked~#three,
+#i4:checked~#four,
+#i5:checked~#five,
+#i6:checked~#six,
+#i7:checked~#seven,
+#i8:checked~#eight {
+  z-index: 9;
+  animation: scroll 1s ease-in-out;
+}
+/* It changes the pictures when you press on the circles */
+
+#i1:checked~#nav_slide #dot1,
+#i2:checked~#nav_slide #dot2,
+#i3:checked~#nav_slide #dot3,
+#i4:checked~#nav_slide #dot4,
+#i5:checked~#nav_slide #dot5,
+#i6:checked~#nav_slide #dot6,
+#i7:checked~#nav_slide #dot7,
+#i8:checked~#nav_slide #dot8 {
+  background-color: rgba(255, 255, 255, .9);
+}
+/* Changes the pictures from the arrows */
+@keyframes scroll {
+  0% {
+    opacity: .4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* Animation for the picture changing. */
+@media screen and (max-width: 685px) {
+  .slider {
+    border: none;
+    width: 100%;
+    height: 0;
+    padding-bottom: 55%;
+  }
+
+  label span {
+    font-size: 50pt;
+  }
+
+  .prev, .next {
+    width: 15%;
+  }
+
+  #nav_slide .dots {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media screen and(min-width: 970px) {
+  .me {
+    display: none;
+  }
+}
+/* Responsive design for the slides */
+.Staff {
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.staff1  {
+  display: inline-block;
+  margin-right: 95px;
+
+}
+.staff1 h4 {
+  text-align: center;
+}
+.staffmiddle {
+  margin-left: 24%;
+}
+/*  Staff customizations*/
+.content p {
+  padding: 20px 120px 5px 120px;
+  line-height: 1.5em;
+}
+.content i {
+  padding: 20px 10px 5px 120px;
+  line-height: 1.5em;
+}
+.content a {
+
+  line-height: 1.5em;
+}
+/* Content customization */
+#nomargin {
+  margin-right: 0;
+}
+/*  ingen margin på en bild så den får inga buggar*/
+footer {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  border: solid 10px #0b1725;
+  margin-top: 100px;
+  border-radius: 20px;
+  border-bottom: none;
+  background:#232e3a;
+  text-align: center;
+}
+/* Footer is done so that it follows the theme  */
+.accordion {
+  background-color:#3b4550 ;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+/* Accordion menu that follows the theme and has transitions */
+.active, .accordion:hover {
+  background-color: #08121d;
+}
+/* Hover customizeringar  */
+.accordion:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+/* Accordion inside customizations that change how the text looks on the inside */
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color:#0b1725 ;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+}
+/* Panel thats inside the accordion */
+.stacc {
+  padding: 40px 120px;
+}
+/* Den har olika padding för diven utanför accordion meny  */
+.accordion:first-child {
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/* Bordern för accordion  */
+.endimg {
+  width: 80%;
+  left: 50%;
+  transform: translateX(5%);
+  /* Img är i mitten på contact us sidan. */
+}
+.gamechampions {
+  background-image: repeating-linear-gradient(#4cadd0,#357991);
+  color: white;
+  font-size: 22px;
+
+  font-family: 'Cabin', sans-serif;
+}
+/* Header customization for only the champions of aerial game site */
+.left {
+  width: 30%;
+  float: left;
+  padding: 10px;
+
+}
+/* Grid starts and has 3 items */
+
+.floatclear {
+  clear: both;
+  display: block;
+}
+/* Float clear at the bottom and the top*/
+.firstline {
+  display: block;
+}
+/* gör att det finns en första linjen på 3 saker på champions of aerial sidan så man kan lägga till en till floated linje  */
+.upupup {
+  margin-top: 175px;
+}
+/* Gör att bilden går upp */
