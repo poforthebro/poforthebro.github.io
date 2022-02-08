@@ -15447,12 +15447,12 @@ function checkWinLose(guess, tiles) {
     showAlert("You Win", 5000);
     danceTiles(tiles);
     stopInteraction();
-    return
+    return;
   }
-  const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])")
+  const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])");
   if (remainingTiles.length === 0) {
-    showAlert(targetWord.toUpperCase(), null)
-    stopInteraction()
+    showAlert(targetWord.toUpperCase(), null);
+    stopInteraction();
   }
 }
 function danceTiles(tiles) {
@@ -15465,7 +15465,7 @@ function danceTiles(tiles) {
           tile.classList.remove("dance");
         },
         { once: true }
-      )
-    }, (index * DANCE_ANIMATION_DURATION) / 5)
-  })
+      );
+    }, (index * DANCE_ANIMATION_DURATION) / 5);
+  });
 }
