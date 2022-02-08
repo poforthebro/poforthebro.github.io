@@ -15364,12 +15364,12 @@ function submitGuess() {
   }
 
   const guess = activeTiles.reduce((word, tile) => {
-    return word + tile.dataset.letter
-  }, "")
+    return word + tile.dataset.letter;
+  }, "");
   if (!dictionary.includes(guess)) {
-    showAlert("This is not a word you dumbass")
-    shakeTiles(activeTiles)
-    return
+    showAlert("This is not a word you dumbass");
+    shakeTiles(activeTiles);
+    return;
   }
 }
 function getActiveTiles() {
